@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html>
+<head>
+	<title>Replace Textarea with Inline Editor &mdash; CKEditor Sample</title>
+	<meta charset="utf-8">
+	<script src="../ckeditor.js"></script>
+   	<link href="sample.css" rel="stylesheet">
+	<style>
+
+		/* Style the CKEditor element to look like a textfield */
+		.cke_textarea_inline
+		{
+			padding: 10px;
+			height: 200px;
+			overflow: auto;
+
+			border: 1px solid gray;
+			-webkit-appearance: textfield;
+		}
+
+	</style>
+</head>
+<body>
+	<h1 class="samples">
+		<a href="index.html">CKEditor Samples</a> &raquo; Replace Textarea with Inline Editor
+	</h1>
+	<div class="description">
+		<p>
+			You can also create an inline editor from a <code>textarea</code>
+			element. In this case the <code>textarea</code> will be replaced
+			by a <code>div</code> element with inline editing enabled.
+		</p>
+<pre class="samples">
+// "article-body" is the name of a textarea element.
+var editor = CKEDITOR.inline( 'article-body' );
+</pre>
+	</div>
+	<form action="sample_posteddata.php" method="post">
+		<h2>This is a sample form with some fields</h2>
+		<p>
+			Title:<br>
+			<input type="text" name="title" value="Sample Form"></p>
+		<p>
+			Article Body (Textarea converted to CKEditor):<br>
+			<textarea name="article-body" style="height: 200px">
+			<h2>ABKM 2013: Statement by Ma.Sarkaryavah Shri Suresh (bhaiyaji) joshi</h2>
+    	<div></div>
+        	<table width="100%">
+        		<tr>
+                    <td height="25" align="center" bgcolor="#FF6700"></td>
+                </tr>
+            </table>
+   	  <p><img alt="$img_title" src="http://www.rss.org/Encyc/2013/10/28/328_08_35_09_DSC08204_resize_H@@IGHT_375_W@@IDTH_500.jpg" /></p>
+    	<p> The three-day Akhil Bharatiya Karyakari Mandal Baithak is being held in Kerala – the Land of Parasuram for the first time. All the functionaries, attending from all parts of Bharat, have enjoyed the warm hospitality that they received here. I sincerely thank the people of the state for their love and affection, and continued support to the RSS because of which the organisation has grown into a major force here.</p>
+    	<p>On Madhav Gadgil Report:</p>
+    	<p>The ABKM held detailed discussions about the impending threats to our environment in general and the eco-system of Western Ghats in particular. The flawed development model that is being pursued and the lavish life style of some in the society are going to cause immense damage to our environment. It is the responsibility of this generation to act immediately to reverse this trend and follow the Bharatiya model of environment-friendly development, so that our future generations can live in peace.</p>
+    	<p>In this context the Madhav Gadgil Panel Report on the preservation of Western Ghats Eco-system is a landmark report. It is unfortunate that instead of placing the recommendations of the Panel before the people and allowing a national debate, the Government of India chose to dump it completely. The RSS is of the view that several recommendations of the Panel are in the larger national interest. We condemn the stand of the Union Government to outrightly reject Madhav Gadgil Committee report.</p>
+    	<p>The report by the committee headed by eminent scientist Dr. Kasturirangan may be a first step, but we are of the view that it is not sufficient. We call upon the Central and concerned State Governments to reconsider their decision with regard to both the reports and initiate larger debate in the country about the future of our environment.</p>
+    	<p>On Communal and Targetted Violence Bill:</p>
+    	<p>The statement of Union Home Minister that the Communal and Targetted Violence Bill will be introduced in the Winter session of the Parliament calls for serious opposition from all right thinking people in the country. This Bill is highly biased, unlawful and dangerously anti-Hindu. It seeks to divide the society on minority-majority lines, which is unconstitutional. Such a Bill, if enacted, will destroy the communal harmony and cause immense damage to the social fabric of the country. Instead of preventing communal violence, it will only lead to further division on communal lines thus creating more disharmony.</p>
+    	<p>Only objective of the Government in retrieving this draft legislation from the cold storage and resurrecting it, seems to be the usual votebank politics. We wish to warn the Government that this anti-Hindu and anti-harmony legislation will be opposed by the countrymen strongly. We call upon all the countrymen to expose the sinister appeasement politics of the ruling party with an eye on the forthcoming elections.</p>
+    	<p>&nbsp;</p>
+   	  <p>&nbsp;</p>
+    	<div class="cleaner"></div>	
+			</textarea>
+		</p>
+		<p>
+			<input type="submit" value="Submit">
+		</p>
+	</form>
+
+	<script>
+		CKEDITOR.replace( 'article-body', {
+    filebrowserBrowseUrl: '../../ckfinder/ckfinder.html',
+    filebrowserImageBrowseUrl: '../../ckfinder/ckfinder.html?Type=Images',
+    filebrowserFlashBrowseUrl: '../../ckfinder/ckfinder.html?Type=Flash',
+    filebrowserUploadUrl: '../../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+    filebrowserImageUploadUrl: '../../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+    filebrowserFlashUploadUrl: '../../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+});
+		CKEDITOR.inline( 'article-body' );
+	</script>
+</body>
+</html>
